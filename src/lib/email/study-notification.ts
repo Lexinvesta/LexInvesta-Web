@@ -22,6 +22,29 @@ function getResend(): Resend | null {
 const FROM = process.env.STUDY_NOTIFICATION_FROM ?? "LexInvesta <solicitud@estudio.lexinvesta.es>";
 const TO = process.env.STUDY_NOTIFICATION_TO ?? "info@lexinvesta.es";
 
+const DEBT_TYPE_LABELS: Record<string, string> = {
+  personalLoans: "Préstamos personales",
+  creditCards: "Tarjetas de crédito",
+  microloans: "Microcréditos",
+  taxAgency: "Hacienda / Seguridad Social",
+  mortgages: "Préstamos hipotecarios",
+  mixed: "Varios tipos (mixto)",
+  other: "Otros",
+};
+
+const SITUATION_LABELS: Record<string, string> = {
+  current: "Al día con los pagos",
+  missedPayments: "Con algunos impagos",
+  garnishments: "Con embargos",
+  lawsuit: "Con demanda judicial",
+  creditBureau: "En ficheros de morosidad (ASNEF, etc.)",
+  other: "Otra situación",
+};
+
+function labelFor(value: string, map: Record<string, string>): string {
+  return map[value] ?? value;
+}
+
 function escape(value: string): string {
   return value
     .replace(/&/g, "&amp;")
@@ -38,8 +61,8 @@ function buildHtml(data: StudyLead): string {
     ["Email", data.email],
     ["Provincia", data.province],
     ["Importe aproximado de deuda", data.debt],
-    ["Tipo de deuda", data.debtType],
-    ["Situación actual", data.situation],
+    ["Tipo de deuda", labelFor(data.debtType, DEBT_TYPE_LABELS)],
+    ["Situación actual", labelFor(data.situation, SITUATION_LABELS)],
   ];
   if (data.message) rows.push(["Mensaje", data.message]);
 
@@ -102,8 +125,8 @@ function buildText(data: StudyLead): string {
     `Email: ${data.email}`,
     `Provincia: ${data.province}`,
     `Importe aproximado de deuda: ${data.debt}`,
-    `Tipo de deuda: ${data.debtType}`,
-    `Situación actual: ${data.situation}`,
+    `Tipo de deuda: ${labelFor(data.debtType, DEBT_TYPE_LABELS)}`,
+    `Situación actual: ${labelFor(data.situation, SITUATION_LABELS)}`,
   ];
   if (data.message) lines.push(`Mensaje: ${data.message}`);
   lines.push(``);
