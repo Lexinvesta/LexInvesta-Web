@@ -6,8 +6,7 @@ import {
   Handshake,
   Scale,
   FileText,
-  Network,
-  ArrowUpRight,
+  Network
 } from "lucide-react";
 
 const ICONS = [Handshake, Scale, FileText, Network];
@@ -67,7 +66,6 @@ export function Solutions() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 border border-gold/20 text-gold">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-muted-soft group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
                 <h3 className="text-lg font-semibold text-cream">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted leading-relaxed flex-1">
