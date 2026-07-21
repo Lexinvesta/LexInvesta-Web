@@ -37,6 +37,9 @@
     ],
     "disclaimer": "Sin mensajes agresivos ni promesas absolutas.",
     "card": {
+      "kicker": "Diagnóstico personalizado",
+      "quote": "El primer paso para recuperar el control es entender tu caso. Te escuchamos y analizamos contigo las opciones.",
+      "footnote": "Conversación confidencial en nuestro estudio de Madrid.",
       "confidentialityLabel": "Confidencialidad",
       "confidentialityValue": "Absoluta",
       "responseTimeLabel": "Tiempo de respuesta",
