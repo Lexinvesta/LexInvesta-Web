@@ -7,12 +7,19 @@ const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, "..");
 const wsPath = join(root, "pnpm-workspace.yaml");
 const lockPath = join(root, "pnpm-lock.yaml");
+const pkgPath = join(root, "package.json");
 
 const localTarballs = {
   next: { file: "vendor/next-16.2.10.tgz", version: "16.2.10" },
   "@next/swc-linux-x64-gnu": { file: "vendor/swc-linux.tgz", version: "16.2.10" },
   "@swc/core-linux-x64-gnu": { file: "vendor/swc-core.tgz", version: "1.15.43" },
 };
+
+const manifest = JSON.parse(readFileSync(pkgPath, "utf-8"));
+const manifestDeps = { ...manifest.dependencies, ...manifest.devDependencies };
+function specifierFor(pkg) {
+  return manifestDeps[pkg] ?? localTarballs[pkg].version;
+}
 
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -120,7 +127,7 @@ function rewriteLockfileToFile(content, pkg, fileRef, version) {
   return importerResult;
 }
 
-function rewriteLockfileToRegistry(content, fileRef, version) {
+function rewriteLockfileToRegistry(content, fileRef, version, manifestSpec) {
   let out = content;
   out = out.replace(
     new RegExp(`, tarball: file:${escapeRegex(fileRef)}`, "g"),
@@ -129,10 +136,10 @@ function rewriteLockfileToRegistry(content, fileRef, version) {
   out = out.replaceAll(`file:${fileRef}`, version);
   out = out.replace(
     new RegExp(
-      `(^[ ]+[\\w@/-]+:\\s*\\n[ ]+specifier: )file:\\.\\/${escapeRegex(fileRef)}\\n([ ]+version: )${escapeRegex(version)}\\(`,
+      `(^[ ]+[\\w@/-]+:\\s*\\n[ ]+specifier: )(?:file:\\.\\/${escapeRegex(fileRef)}|${escapeRegex(manifestSpec)}|${escapeRegex(version)})\\n([ ]+version: )${escapeRegex(version)}\\(`,
       "gm",
     ),
-    `$1^${version}\n$2${version}(`,
+    `$1${manifestSpec}\n$2${version}(`,
   );
   out = out.replace(
     new RegExp(
@@ -181,12 +188,33 @@ if (existsSync(lockPath)) {
         rewritten,
         info.file,
         info.version,
+        specifierFor(pkg),
       );
     }
     writeFileSync(lockPath, rewritten);
     console.log(
       "[setup-overrides] Rewrote pnpm-lock.yaml to use registry versions",
     );
+  } else if (!hasFileRefs) {
+    let rewritten = original;
+    let normalized = 0;
+    for (const [pkg, info] of Object.entries(localTarballs)) {
+      const manifestSpec = specifierFor(pkg);
+      const importerRe = new RegExp(
+        `(^[ ]+${escapeRegex(pkg)}:\\s*\\n[ ]+specifier: )[^\\n]+\\n([ ]+version: )${escapeRegex(info.version)}\\(`,
+        "gm",
+      );
+      if (importerRe.test(rewritten)) {
+        rewritten = rewritten.replace(importerRe, `$1${manifestSpec}\n$2${info.version}(`);
+        normalized += 1;
+      }
+    }
+    if (normalized > 0) {
+      writeFileSync(lockPath, rewritten);
+      console.log(
+        `[setup-overrides] Normalized ${normalized} importer specifier(s) in pnpm-lock.yaml to match package.json`,
+      );
+    }
   }
 }
 
