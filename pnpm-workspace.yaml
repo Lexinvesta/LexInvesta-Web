@@ -9,8 +9,3 @@ onlyBuiltDependencies:
   - "@swc/core"
   - sharp
   - unrs-resolver
-
-overrides:
-  "next": "file:./vendor/next-16.2.10.tgz"
-  "@next/swc-linux-x64-gnu": "file:./vendor/swc-linux.tgz"
-  "@swc/core-linux-x64-gnu": "file:./vendor/swc-core.tgz"
