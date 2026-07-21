@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
-const BASE_URL = "https://lexinversta.es";
+const BASE_URL = "https://lexinvesta.es";
 
 function localizedPath(locale: string, path: string) {
   return locale === routing.defaultLocale

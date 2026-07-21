@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("meta");
   return {
-    metadataBase: new URL("https://lexinversta.es"),
+    metadataBase: new URL("https://lexinvesta.es"),
     title: {
       default: t("title"),
       template: `%s — LexInvesta`,
@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: "es_ES",
-      url: "https://lexinversta.es",
+      url: "https://lexinvesta.es",
       siteName: t("siteName"),
       title: t("ogTitle"),
       description: t("ogDescription"),
@@ -67,7 +67,10 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: "https://lexinversta.es",
+      canonical: "https://lexinvesta.es",
+    },
+    verification: {
+      google: "t-ehf5490GbJsVA5mEmnDMa3VjEMVoNRZtoLsJpq6bk",
     },
   };
 }
