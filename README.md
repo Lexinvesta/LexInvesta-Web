@@ -102,6 +102,8 @@ LexInvesta-Web/
 
 > Requiere **Node.js 20+** y **pnpm 10+**.
 
+> El proyecto incluye un `.npmrc` con `dangerouslyAllowAllBuilds=true` para que pnpm 11 ejecute los build scripts nativos de `@parcel/watcher`, `@swc/core`, `sharp` y `unrs-resolver`. Sin esto, pnpm 11 bloquea esos scripts y `sharp` no tiene binarios nativos. La lista de paquetes permitidos también está documentada en `pnpm-workspace.yaml` bajo `onlyBuiltDependencies`.
+
 ## Variables de entorno
 
 Copia `.env.example` a `.env` y rellena los valores reales:
