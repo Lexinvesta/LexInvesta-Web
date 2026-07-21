@@ -122,7 +122,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="lg:col-span-5"
           >
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-md mx-auto sm:aspect-[4/5]">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/20 via-gold/5 to-transparent border border-gold/20" />
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <div
@@ -133,12 +133,12 @@ export function Hero() {
                   }}
                 />
               </div>
-              <div className="absolute inset-0 flex flex-col p-8 bg-gradient-to-t from-ink via-ink/40 to-transparent rounded-2xl">
+              <div className="relative flex flex-col p-6 sm:p-8 sm:absolute sm:inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent rounded-2xl">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
-                  className="flex-1 flex flex-col justify-center text-center"
+                  className="flex-1 flex flex-col justify-center text-center min-w-0"
                 >
                   <Quote
                     className="h-7 w-7 text-gold/40 mx-auto mb-4"
@@ -155,32 +155,32 @@ export function Hero() {
                   </p>
                 </motion.div>
 
-                <div className="mt-6 pt-6 border-t border-gold/15">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
+                <div className="mt-6 pt-6 border-t border-gold/15 min-w-0">
+                <div className="flex items-center gap-3 mb-4 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
                     <Lock className="h-5 w-5 text-gold" />
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-soft">{t("card.confidentialityLabel")}</p>
-                    <p className="text-sm text-cream font-medium">{t("card.confidentialityValue")}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-muted-soft break-words">{t("card.confidentialityLabel")}</p>
+                    <p className="text-sm text-cream font-medium break-words">{t("card.confidentialityValue")}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
+                <div className="flex items-center gap-3 mb-4 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
                     <MessageCircle className="h-5 w-5 text-gold" />
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-soft">{t("card.responseTimeLabel")}</p>
-                    <p className="text-sm text-cream font-medium">{t("card.responseTimeValue")}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-muted-soft break-words">{t("card.responseTimeLabel")}</p>
+                    <p className="text-sm text-cream font-medium break-words">{t("card.responseTimeValue")}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
                     <ShieldCheck className="h-5 w-5 text-gold" />
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-soft">{t("card.firstGuidanceLabel")}</p>
-                    <p className="text-sm text-cream font-medium">{t("card.firstGuidanceValue")}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-muted-soft break-words">{t("card.firstGuidanceLabel")}</p>
+                    <p className="text-sm text-cream font-medium break-words">{t("card.firstGuidanceValue")}</p>
                   </div>
                 </div>
                 </div>
