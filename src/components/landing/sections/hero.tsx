@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowRight, ShieldCheck, Lock, MessageCircle, Check } from "lucide-react";
+import { ArrowRight, ShieldCheck, Lock, MessageCircle, Check, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const fadeUp = {
@@ -133,7 +133,29 @@ export function Hero() {
                   }}
                 />
               </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-ink via-ink/40 to-transparent rounded-2xl">
+              <div className="absolute inset-0 flex flex-col p-8 bg-gradient-to-t from-ink via-ink/40 to-transparent rounded-2xl">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  className="flex-1 flex flex-col justify-center text-center"
+                >
+                  <Quote
+                    className="h-7 w-7 text-gold/40 mx-auto mb-4"
+                    aria-hidden="true"
+                  />
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold font-medium">
+                    {t("card.kicker")}
+                  </p>
+                  <p className="mt-5 text-xl sm:text-2xl font-serif text-cream leading-snug text-balance">
+                    {t("card.quote")}
+                  </p>
+                  <p className="mt-5 text-xs text-muted-soft italic">
+                    {t("card.footnote")}
+                  </p>
+                </motion.div>
+
+                <div className="mt-6 pt-6 border-t border-gold/15">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 border border-gold/30">
                     <Lock className="h-5 w-5 text-gold" />
@@ -160,6 +182,7 @@ export function Hero() {
                     <p className="text-xs text-muted-soft">{t("card.firstGuidanceLabel")}</p>
                     <p className="text-sm text-cream font-medium">{t("card.firstGuidanceValue")}</p>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
