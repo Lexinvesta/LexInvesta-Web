@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "title": "LexInvesta — Intermediación y resolución de conflictos financieros en Madrid",
+    "description": "Analizamos tu situación, negociamos con acreedores y coordinamos soluciones como la Ley de Segunda Oportunidad mediante despachos colaboradores. Solicita estudio gratuito o reserva un diagnóstico presencial en Madrid.",
+    "ogTitle": "LexInvesta — Recupera el control de tu situación financiera",
+    "ogDescription": "Intermediación financiera personalizada en Madrid. Negociación de deudas, Ley de Segunda Oportunidad y reclamaciones financieras con absoluta discreción.",
+    "keywords": "Ley de Segunda Oportunidad Madrid, negociación de deudas, intermediación con acreedores, cancelar deudas legalmente, embargos y deudas, reclamación de intereses abusivos, LexInvesta",
+    "siteName": "LexInvesta"
+  },
+  "nav": {
+    "home": "Inicio",
+    "solutions": "Soluciones",
+    "diagnostic": "Diagnóstico",
+    "process": "Proceso",
+    "method": "Método",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primaryNav": "Navegación principal",
+    "mobileNav": "Navegación móvil",
+    "studyCta": "Estudio gratuito",
+    "bookCta": "Reservar diagnóstico",
+    "homeAriaLabel": "LexInvesta - Inicio"
+  },
+  "hero": {
+    "eyebrow": "Intermediación financiera especializada",
+    "title": "Recupera el control de tu situación financiera.",
+    "subtitle": "En LexInvesta analizamos tu caso, negociamos con entidades acreedoras y coordinamos soluciones adaptadas a tu situación, incluyendo la Ley de Segunda Oportunidad mediante despachos colaboradores.",
+    "primaryCta": "Solicitar estudio gratuito",
+    "secondaryCta": "Reservar diagnóstico presencial",
+    "trust": [
+      "Atención personalizada y confidencial",
+      "Análisis previo de viabilidad",
+      "Negociación con acreedores",
+      "Coordinación con despachos colaboradores"
+    ],
+    "disclaimer": "Sin mensajes agresivos ni promesas absolutas.",
+    "card": {
+      "confidentialityLabel": "Confidencialidad",
+      "confidentialityValue": "Absoluta",
+      "responseTimeLabel": "Tiempo de respuesta",
+      "responseTimeValue": "< 24h laborables",
+      "firstGuidanceLabel": "Primera orientación",
+      "firstGuidanceValue": "Gratuita"
+    }
+  },
+  "problem": {
+    "eyebrow": "El problema",
+    "title": "Cuando las deudas empiezan a controlar tu vida.",
+    "intro": "Miles de personas y autónomos en Madrid conviven con una presión financiera que se agrava con el tiempo. Si te identificas con alguna de estas situaciones, podemos ayudarte a estudiarlas.",
+    "items": [
+      {
+        "title": "Préstamos, tarjetas o microcréditos acumulados",
+        "description": "Cuotas crecientes, intereses desbocados y sensación de no llegar a fin de mes."
+      },
+      {
+        "title": "Embargos, reclamaciones o demandas",
+        "description": "Notificaciones de entidades, demandas judiciales o situaciones que avanzan sin que sepas cómo detenerlas."
+      },
+      {
+        "title": "Acreedores múltiples sin interlocución",
+        "description": "Demasiadas entidades, ninguna respuesta clara y ningún plan que ordene el problema."
+      },
+      {
+        "title": "Autónomos con deudas profesionales",
+        "description": "Deuda personal mezclada con la del negocio, Hacienda o Seguridad Social pendientes."
+      }
+    ],
+    "outro": "No se trata de magia ni de fórmulas milagro. Se trata de un análisis riguroso, una estrategia a medida y un interlocutor que trabaja solo para tu parte."
+  },
+  "solutions": {
+    "eyebrow": "Soluciones LexInvesta",
+    "title": "Cuatro vías de actuación, una sola metodología.",
+    "items": [
+      {
+        "title": "Negociación de deudas",
+        "description": "Estudiamos tu exposición total, planteamos una estrategia de negociación con cada entidad y buscamos acuerdos realistas de reestructuración o quita."
+      },
+      {
+        "title": "Ley de Segunda Oportunidad",
+        "description": "Estudio inicial de viabilidad y acompañamiento del proceso a través de despachos colaboradores especializados."
+      },
+      {
+        "title": "Reclamaciones financieras",
+        "description": "Revisión de cláusulas suelo, gastos hipotecarios, intereses abusivos y productos financieros con posible nulidad."
+      },
+      {
+        "title": "Intermediación con acreedores",
+        "description": "Actuamos como tu único interlocutor frente a las entidades, evitando llamadas, presiones y respuestas improvisadas."
+      }
+    ]
+  },
+  "diagnostic": {
+    "eyebrow": "Servicio premium",
+    "title": "Diagnóstico Presencial",
+    "intro": "Una sesión privada de análisis, estrategia y orientación de hasta 60 minutos en nuestra oficina de Madrid.",
+    "comingSoonBadge": "Próximamente",
+    "availabilityNote": "Las reservas se abrirán próximamente.",
+    "priceLabel": "Precio",
+    "price": "125,00 €",
+    "priceNote": "Pago en la reserva. IVA incluido. No reembolsable una vez realizada la sesión.",
+    "duration": "Hasta 60 minutos",
+    "location": "Oficina LexInvesta — Madrid",
+    "includes": {
+      "title": "Qué incluye",
+      "items": [
+        "Análisis de tu situación económica actual.",
+        "Revisión de deudas, préstamos, tarjetas, embargos o reclamaciones.",
+        "Valoración de posibles negociaciones con acreedores.",
+        "Estudio inicial de viabilidad de Ley de Segunda Oportunidad.",
+        "Explicación clara de alternativas y siguientes pasos.",
+        "Resolución de dudas durante la sesión."
+      ]
+    },
+    "terms": {
+      "title": "Condiciones económicas",
+      "items": [
+        "El importe de 125,00 € corresponde a la reserva y realización del Diagnóstico Presencial (IVA incluido).",
+        "Este importe remunera el tiempo profesional dedicado al análisis del caso y no será reembolsable una vez realizada la sesión.",
+        "Si contratas posteriormente un servicio de LexInvesta dentro de los 30 días naturales siguientes, los 125,00 € se descuentan íntegramente de la primera cuota del procedimiento o servicio contratado.",
+        "Si no cumples requisitos, no es posible ofrecerte una solución o decides no contratar, el importe no se devuelve, ya que la sesión y el análisis han sido prestados."
+      ]
+    }
+  },
+  "process": {
+    "eyebrow": "Proceso",
+    "title": "Una metodología clara, sin sorpresas.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Valoración",
+        "description": "Analizamos tu caso: deudas, ingresos, patrimonio y viabilidad de cada vía."
+      },
+      {
+        "step": "02",
+        "title": "Estrategia",
+        "description": "Definimos prioridades, plazos y el plan de negociación o procedimiento más adecuado."
+      },
+      {
+        "step": "03",
+        "title": "Documentación",
+        "description": "Te indicamos exactamente qué documentación necesitamos y la preparamos contigo."
+      },
+      {
+        "step": "04",
+        "title": "Inicio o derivación",
+        "description": "Ejecutamos la estrategia o derivamos a un despacho colaborador si tu caso lo requiere."
+      }
+    ]
+  },
+  "trust": {
+    "eyebrow": "Confianza y método",
+    "title": "Cómo trabajamos, en lo que creemos.",
+    "items": [
+      {
+        "title": "Confidencialidad absoluta",
+        "description": "Tu información se trata con la máxima discreción. Nada de tu caso se comparte sin tu autorización expresa."
+      },
+      {
+        "title": "Trato personalizado",
+        "description": "No eres un expediente. Cada caso se estudia de forma individual por un equipo reducido y estable."
+      },
+      {
+        "title": "Coordinación con despachos",
+        "description": "Cuando el caso requiere asistencia jurídica, lo derivamos a despachos colaboradores especializados. La asistencia procesal la prestan ellos, no LexInvesta."
+      },
+      {
+        "title": "Seguimiento continuo",
+        "description": "Te mantenemos informado en cada paso, con lenguaje claro y sin tecnicismos innecesarios."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Resolvemos las dudas más habituales.",
+    "items": [
+      {
+        "question": "¿LexInvesta es un despacho de abogados?",
+        "answer": "No. LexInvesta es una firma especializada en intermediación y resolución de conflictos financieros. Cuando un caso requiere asistencia jurídica procesal, lo derivamos a despachos colaboradores especializados que son quienes prestan esa representación."
+      },
+      {
+        "question": "¿Qué pasa si no cumplo los requisitos?",
+        "answer": "Te lo diremos con honestidad desde el primer análisis. Si no es posible ofrecerte una solución, te reembolsar el coste del diagnóstico y te orientaremos sobre pasos que sí puedes dar."
+      },
+      {
+        "question": "¿Cuánto cuesta el servicio?",
+        "answer": "El estudio inicial gratuito nos permite conocer tu caso y orientarte sin compromiso. El Diagnóstico Presencial tiene un coste de 125,00 € (IVA incluido), que se descuentan íntegramente de la primera cuota si contratas posteriormente un servicio de LexInvesta dentro de los 30 días naturales siguientes."
+      },
+      {
+        "question": "¿Puedo pagar el diagnóstico en cuotas?",
+        "answer": "El pago del diagnóstico se realiza íntegro en el momento de la reserva, para garantizar la cita y comprometer el tiempo profesional dedicado."
+      },
+      {
+        "question": "¿Trabajáis con casos de toda España?",
+        "answer": "El diagnóstico presencial se realiza en nuestra oficina de Madrid. El acompañamiento y la intermediación pueden prestarse a clientes de toda España, con reuniones presenciales puntuales cuando el caso lo requiere."
+      },
+      {
+        "question": "¿Cuánto tarda un proceso de Ley de Segunda Oportunidad?",
+        "answer": "Depende de la complejidad del caso, la carga del juzgado y la oposición de los acreedores. Como referencia, puede resolverse entre 12 y 24 meses cuando se cumplen los requisitos."
+      },
+      {
+        "question": "¿Qué documentación necesito para empezar?",
+        "answer": "Tras el primer contacto te enviaremos una lista cerrada y ordenada de la documentación que necesitamos. No te pedimos nada hasta que confirmes que quieres continuar."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Estudio gratuito, sin compromiso.",
+    "intro": "Cuéntanos tu caso por este formulario. Te responderemos en menos de 24 horas laborables con una primera orientación.",
+    "name": "Nombre y apellidos",
+    "phone": "Teléfono",
+    "email": "Email",
+    "province": "Provincia",
+    "debt": "Importe aproximado de deuda",
+    "debtType": "Tipo de deuda principal",
+    "debtTypeOptions": {
+      "placeholder": "Selecciona una opción",
+      "personalLoans": "Préstamos personales",
+      "creditCards": "Tarjetas de crédito",
+      "microloans": "Microcréditos",
+      "taxAgency": "Hacienda / Seguridad Social",
+      "mortgages": "Préstamos hipotecarios",
+      "mixed": "Varios tipos (mixto)",
+      "other": "Otros"
+    },
+    "situation": "Situación actual",
+    "situationOptions": {
+      "placeholder": "Selecciona una opción",
+      "current": "Al día con los pagos",
+      "missedPayments": "Con algunos impagos",
+      "garnishments": "Con embargos",
+      "lawsuit": "Con demanda judicial",
+      "creditBureau": "En ficheros de morosidad (ASNEF, etc.)",
+      "other": "Otra situación"
+    },
+    "message": "Cuéntanos algo más (opcional)",
+    "gdprConsent": "Acepto la política de privacidad y el tratamiento de mis datos para gestionar mi solicitud.",
+    "privacyPolicy": "política de privacidad",
+    "submit": "Solicitar estudio gratuito",
+    "submitting": "Enviando…",
+    "success": "Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas laborables.",
+    "error": "Ha habido un error al enviar. Por favor, inténtalo de nuevo o escríbenos directamente.",
+    "sendAnother": "Enviar otra consulta",
+    "highlights": [
+      "Atendemos toda España. El diagnóstico presencial se realiza en Madrid.",
+      "Tus datos se tratan conforme al RGPD y nunca se comparten sin tu consentimiento.",
+      "La primera orientación es gratuita y sin compromiso."
+    ],
+    "contactInfo": {
+      "phone": "900 877 289",
+      "email": "info@lexinvesta.es",
+      "address": "Calle Santa Hortensia 22, local B, 28002 Madrid",
+      "hours": "Lun a Vie · 9:00 a 19:00"
+    },
+    "placeholders": {
+      "phone": "900877289",
+      "debt": "15.000 €"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "email": "Introduce un email válido.",
+      "phone": "Introduce un teléfono válido (9 dígitos).",
+      "debtMin": "Indica un importe aproximado.",
+      "turnstileRequired": "Por favor, completa la verificación anti-bots."
+    }
+  },
+  "footer": {
+    "disclaimer": "LexInvesta presta servicios de intermediación, negociación y coordinación de soluciones financieras. La asistencia jurídica y representación procesal, cuando procede, será prestada por despachos de abogados colaboradores.",
+    "noPromises": "No prometemos cancelación de deudas, resultados garantizados ni porcentajes de quita asegurados. La comunicación es profesional, prudente y orientada al análisis individual de cada caso.",
+    "company": "LexInvesta",
+    "addressLine1": "Calle Santa Hortensia 22, local B",
+    "addressLine2": "28002 Madrid, España",
+    "phoneLabel": "Teléfono",
+    "phone": "900 877 289",
+    "whatsappLabel": "WhatsApp",
+    "whatsapp": "+34 611 847 163",
+    "emailLabel": "Correo",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "legalNotice": "Aviso legal",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "diagnosticTerms": "Condiciones del diagnóstico",
+    "rights": "© {year} LexInvesta. Todos los derechos reservados."
+  },
+  "whatsapp": {
+    "label": "Hablar por WhatsApp",
+    "tooltip": "Escríbenos por WhatsApp",
+    "defaultMessage": "Hola, vengo desde la web de LexInvesta y me gustaría más información."
+  },
+  "legal": {
+    "lastUpdated": "Última actualización: Julio de 2026",
+    "legalNotice": {
+      "title": "Aviso legal"
+    },
+    "privacy": {
+      "title": "Política de privacidad"
+    },
+    "cookies": {
+      "title": "Política de cookies"
+    },
+    "diagnosticTerms": {
+      "title": "Condiciones del Servicio de Diagnóstico Presencial"
+    }
+  }
+}
