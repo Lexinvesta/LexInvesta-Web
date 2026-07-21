@@ -134,6 +134,13 @@ function rewriteLockfileToRegistry(content, fileRef, version) {
     ),
     `$1^${version}\n$2${version}(`,
   );
+  out = out.replace(
+    new RegExp(
+      `^overrides:\\n(?:  .*\\n)*`,
+      "m",
+    ),
+    "",
+  );
   return out;
 }
 
@@ -149,6 +156,18 @@ if (existsSync(lockPath)) {
         pkg,
         info.file,
         info.version,
+      );
+    }
+    if (!/^overrides:/m.test(rewritten)) {
+      const overridesBlock =
+        "overrides:\n" +
+        Object.entries(localTarballs)
+          .map(([pkg, info]) => `  ${pkg}: file:./${info.file}`)
+          .join("\n") +
+        "\n\n";
+      rewritten = rewritten.replace(
+        /^(importers:\n)/m,
+        overridesBlock + "$1",
       );
     }
     writeFileSync(lockPath, rewritten);

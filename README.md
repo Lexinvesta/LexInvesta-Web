@@ -104,6 +104,56 @@ LexInvesta-Web/
 
 > El proyecto incluye un `.npmrc` con `dangerouslyAllowAllBuilds=true` para que pnpm 11 ejecute los build scripts nativos de `@parcel/watcher`, `@swc/core`, `sharp` y `unrs-resolver`. Sin esto, pnpm 11 bloquea esos scripts y `sharp` no tiene binarios nativos. La lista de paquetes permitidos también está documentada en `pnpm-workspace.yaml` bajo `onlyBuiltDependencies`.
 
+## Workflow: local con vendor/ vs Vercel con registry
+
+El proyecto usa tarballs locales en `vendor/` para acelerar el install cuando la red es lenta, pero Vercel no tiene acceso a `vendor/` (está en `.gitignore`). El script `scripts/setup-overrides.mjs` (ejecutado como `preinstall`) gestiona la transición entre los dos modos, pero **pnpm lee el lockfile antes del preinstall**, así que el lockfile commiteado debe estar en el modo correcto para el destino.
+
+### Estado commiteado (para Vercel)
+
+El `pnpm-lock.yaml` commiteado está en **modo registry** (0 referencias a `file:vendor/`). En Vercel:
+
+1. pnpm install lee el lockfile en registry mode
+2. pnpm install descarga `next`, `@next/swc-linux-x64-gnu` y `@swc/core-linux-x64-gnu` desde npmjs.org
+3. El preinstall no necesita reescribir nada (vendor/ no existe en Vercel)
+
+### Estado local con vendor/ (rápido)
+
+Para evitar la descarga de los ~80 MB desde el registro cuando la red es lenta:
+
+```bash
+# 1. Coloca los tarballs en vendor/ (gitignored)
+mkdir -p vendor
+# ... descarga los 3 tarballs con un manager de paquetes o curl ...
+
+# 2. Activa el modo vendor
+node scripts/setup-overrides.mjs
+pnpm install
+```
+
+El script detecta `vendor/`, añade los `overrides` al workspace y reescribe el lockfile a modo `file:vendor/...`. pnpm install usa los tarballs locales.
+
+### Antes de commitear
+
+Si trabajaste en local con vendor/, el lockfile quedó en modo `file:`. **Debes devolverlo a modo registry antes de commitear** o el deploy de Vercel fallará con `ENOENT`:
+
+```bash
+mv vendor /tmp/vendor-backup
+node scripts/setup-overrides.mjs
+mv /tmp/vendor-backup vendor
+git add pnpm-lock.yaml pnpm-workspace.yaml
+git commit ...
+```
+
+El script detecta que vendor/ no está, quita los `overrides` del workspace y reescribe el lockfile a modo registry. Tras el commit, `vendor/` vuelve a su sitio para seguir trabajando en local.
+
+### Alternativa: commitear siempre con vendor/ vacío
+
+Si prefieres no preocuparte por la reescritura antes del commit, puedes:
+
+1. Mantener el lockfile siempre en modo registry (estado actual commiteado)
+2. Localmente, hacer `pnpm install` desde el registro (más lento, ~80 MB)
+3. Usar `vendor/` solo si necesitas velocidad de install puntual
+
 ## Variables de entorno
 
 Copia `.env.example` a `.env` y rellena los valores reales:
