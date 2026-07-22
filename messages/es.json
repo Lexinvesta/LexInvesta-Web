@@ -51,7 +51,7 @@
   "problem": {
     "eyebrow": "El problema",
     "title": "Cuando las deudas empiezan a controlar tu vida.",
-    "intro": "Miles de personas y autónomos en Madrid conviven con una presión financiera que se agrava con el tiempo. Si te identificas con alguna de estas situaciones, podemos ayudarte a estudiarlas.",
+    "intro": "Miles de personas y autónomos en España conviven con una presión financiera que se agrava con el tiempo. Si te identificas con alguna de estas situaciones, podemos ayudarte a estudiarlas.",
     "items": [
       {
         "title": "Préstamos, tarjetas o microcréditos acumulados",
@@ -66,7 +66,7 @@
         "description": "Demasiadas entidades, ninguna respuesta clara y ningún plan que ordene el problema."
       },
       {
-        "title": "Autónomos con deudas profesionales",
+        "title": "Autónomos con deudas",
         "description": "Deuda personal mezclada con la del negocio, Hacienda o Seguridad Social pendientes."
       }
     ],
@@ -106,14 +106,14 @@
     "duration": "Hasta 60 minutos",
     "location": "Oficina LexInvesta — Madrid",
     "includes": {
-      "title": "Qué incluye",
+      "title": "Qué incluye", 
       "items": [
         "Análisis de tu situación económica actual.",
         "Revisión de deudas, préstamos, tarjetas, embargos o reclamaciones.",
         "Valoración de posibles negociaciones con acreedores.",
         "Estudio inicial de viabilidad de Ley de Segunda Oportunidad.",
         "Explicación clara de alternativas y siguientes pasos.",
-        "Resolución de dudas durante la sesión."
+        "Recomendación de la solución más adecuada según tu situación."
       ]
     },
     "terms": {
@@ -184,7 +184,7 @@
       },
       {
         "question": "¿Qué pasa si no cumplo los requisitos?",
-        "answer": "Te lo diremos con honestidad desde el primer análisis. Si no es posible ofrecerte una solución, te reembolsar el coste del diagnóstico y te orientaremos sobre pasos que sí puedes dar."
+        "answer": "Si no cumples los requisitos o no es posible ofrecerte una solución, el importe abonado no se reembolsa, ya que corresponde al coste profesional del análisis y la sesión realizada."
       },
       {
         "question": "¿Cuánto cuesta el servicio?",
