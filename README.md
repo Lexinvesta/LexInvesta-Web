@@ -28,7 +28,7 @@ Sitio web corporativo de LexInvesta: intermediación y resolución de conflictos
 LexInvesta-Web/
 ├── messages/
 │   └── es.json                     # Strings de usuario (español). Claves en inglés.
-├── public/                         # (vacío — icon.svg se sirve desde src/app/)
+├── public/                         # (vacío — favicon.svg se sirve desde src/app/)
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/
@@ -40,7 +40,7 @@ LexInvesta-Web/
 │   │   │       ├── cookies/page.tsx
 │   │   │       └── diagnostic-terms/page.tsx
 │   │   ├── api/study/route.ts      # POST: rate-limit → Zod → Turnstile → Resend
-│   │   ├── icon.svg                # Favicon (L monogram + gold dot)
+│   │   ├── favicon.svg                # Favicon (L monogram + gold dot)
 │   │   ├── layout.tsx              # Root layout, providers, JSON-LD
 │   │   ├── globals.css             # Design tokens + reset
 │   │   ├── robots.ts
@@ -218,7 +218,7 @@ Formulario de study (`src/components/forms/study-form.tsx`):
 | `/legal/cookies` | Server-rendered | Política de cookies |
 | `/legal/diagnostic-terms` | Server-rendered | Términos del Diagnóstico Presencial |
 | `/api/study` | API (POST) | Endpoint del formulario de solicitud |
-| `/icon.svg` | Static | Favicon (L monogram + gold dot) |
+| `/favicon.svg` | Static | Favicon (L monogram + gold dot) |
 | `/robots.txt` | Static | robots.txt |
 | `/sitemap.xml` | Static | Sitemap con `alternates.languages` |
 | `/_not-found` | Server-rendered | 404 |

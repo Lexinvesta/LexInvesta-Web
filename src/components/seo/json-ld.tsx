@@ -19,7 +19,7 @@ function organizationData() {
     name: BRAND,
     alternateName: "Lex Investa",
     url: "https://lexinvesta.es",
-    logo: "https://lexinvesta.es/icon.svg",
+    logo: "https://lexinvesta.es/favicon.svg",
     description:
       "Intermediación y resolución de conflictos financieros. Negociación de deudas, Ley de Segunda Oportunidad y reclamaciones financieras en Madrid.",
     founder: {
